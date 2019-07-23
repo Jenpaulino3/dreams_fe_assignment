@@ -5,7 +5,8 @@
             :markerInfo="markerInfo" />
         <div class="marker"
             @mouseover="onMarkerEvent(true)"
-            @mouseleave="onMarkerEvent(false)">
+            @mouseleave="onMarkerEvent(false)"
+            @click="onMarkerClick(markerInfo)">
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="24" 
@@ -38,6 +39,9 @@ export default {
         onMarkerEvent (condition) {
             condition === true ? this.markerIsHovered = true 
                 : this.markerIsHovered = false
+        },
+        onMarkerClick (markerInfo) {
+            console.log(markerInfo)
         }
     }
 }

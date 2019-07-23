@@ -18,7 +18,9 @@ export default {
         border: 2px solid #00A3FF;
         border-radius: 5px;
         bottom: 85px;
+        font-family: sans-serif;
         font-weight: bold;
+        line-height: 20px;
         width: 250px;
         p {
             margin: 10px;

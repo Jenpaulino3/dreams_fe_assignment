@@ -99,7 +99,7 @@ export default {
                 display: flex;
                 position: relative;
                 top: -35px;
-                // margin-right: 10px;
+                cursor: pointer;
                 .control {
                     height: 20px;
                     width: 20px;
