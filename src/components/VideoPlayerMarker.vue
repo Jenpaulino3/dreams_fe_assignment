@@ -52,7 +52,7 @@ export default {
         position: relative;
         .marker {
             position: absolute;
-            margin-top: -75px;
+            bottom: 45px;
             cursor: pointer;
             svg {
                 transform: rotate(90deg);

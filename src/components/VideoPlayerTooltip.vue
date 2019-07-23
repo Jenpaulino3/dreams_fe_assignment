@@ -21,7 +21,7 @@ export default {
         font-family: sans-serif;
         font-weight: bold;
         line-height: 20px;
-        width: 250px;
+        width: 275px;
         p {
             margin: 10px;
         }

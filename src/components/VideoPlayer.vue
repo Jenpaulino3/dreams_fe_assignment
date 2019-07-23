@@ -67,7 +67,7 @@ export default {
                 : this.setPlayerUIDisplay = { display: 'none' }
         },
         markerPosition (timecode) {
-            let calc = (100/this.videoInfo.duration) * timecode + 'px'
+            let calc = (100/this.videoInfo.duration) * timecode + '%'
             let position = { left: calc }
             return position
         }
