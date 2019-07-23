@@ -1,5 +1,8 @@
 <template>
     <div>
+        <VideoPlayerTooltip 
+            :style="markerIsHovered ? 'display: block' : 'display: none' "
+            :markerInfo="markerInfo" />
         <div class="marker"
             @mouseover="onMarkerEvent(true)"
             @mouseleave="onMarkerEvent(false)">
@@ -18,7 +21,14 @@
     </div>
 </template>
 <script>
+import VideoPlayerTooltip from '@/components/VideoPlayerTooltip'
 export default {
+    components: {
+        VideoPlayerTooltip
+    },
+    props: {
+        markerInfo: Object
+    },
     data () {
         return {
             markerIsHovered: false

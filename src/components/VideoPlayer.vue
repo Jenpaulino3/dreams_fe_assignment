@@ -10,9 +10,11 @@
                 </div>
                 <VideoPlayerMarker v-for="marker in videoInfo.markers" 
                     :key="marker.id"
-                    :style="markerPosition(marker.timecode)" />
+                    :style="markerPosition(marker.timecode)"
+                    :markerInfo="marker" />
                 <div class="player-controls">
-                    <div class="control" v-for="control in playerControls" :key="control">
+                    <div class="control" 
+                        v-for="control in playerControls" :key="control">
                     </div>
                 </div>
             </div>
