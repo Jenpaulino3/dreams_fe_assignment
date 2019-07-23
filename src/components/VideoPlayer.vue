@@ -84,14 +84,14 @@ export default {
                 display: none;
                 .progress-bar {
                     position: relative;
-                    height: 5px;
-                    top: -45px;
+                    height: 4px;
+                    bottom: 45px;
                     margin: 0 10px;
-                    background-color: lightgrey;
+                    background-color: rgba(255, 255, 255, 0.25);
                     .playhead {
-                        height: 5px;
+                        height: 4px;
                         background-color: #fff;
-                        width: 40px;
+                        width: 5%;
                     }
                 }
             }
