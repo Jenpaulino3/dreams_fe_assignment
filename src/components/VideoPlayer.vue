@@ -64,7 +64,7 @@ export default {
     methods: {
         onMouseEvent (condition) {
             condition === 'show' ? this.setPlayerUIDisplay = { display: 'block'} 
-                : this.setPlayerUIDisplay = { display: 'block' }
+                : this.setPlayerUIDisplay = { display: 'none' }
         },
         markerPosition (timecode) {
             let calc = (100/this.videoInfo.duration) * timecode + 'px'
@@ -81,7 +81,7 @@ export default {
                 width: 100%;
             }
             .player-ui {
-                display: block;
+                display: none;
                 .progress-bar {
                     position: relative;
                     height: 5px;

@@ -19,6 +19,7 @@ export default {
         border-radius: 5px;
         bottom: 85px;
         font-weight: bold;
+        width: 250px;
         p {
             margin: 10px;
         }
