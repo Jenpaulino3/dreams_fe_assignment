@@ -12,11 +12,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .homepage {
-        #player {
-            img {
-                width: 100%;
-            }
-        }
-    }
 </style>

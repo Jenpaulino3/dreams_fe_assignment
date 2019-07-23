@@ -1,6 +1,6 @@
 <template>
     <div class="video-player">
-        <div id="player" ref="player" 
+        <div id="player"
             @mouseover="onMouseEvent('show')"
             @mouseleave="onMouseEvent('hide')">
             <img class="video" :src="videoImage">
@@ -8,13 +8,15 @@
                 <div class="progress-bar">
                     <div class="playhead"></div>
                 </div>
-                <VideoPlayerMarker v-for="marker in videoInfo.markers" 
+                <VideoPlayerMarker 
+                    v-for="marker in videoInfo.markers" 
                     :key="marker.id"
                     :style="markerPosition(marker.timecode)"
                     :markerInfo="marker" />
                 <div class="player-controls">
                     <div class="control" 
-                        v-for="control in playerControls" :key="control">
+                        v-for="control in playerControls" 
+                        :key="control">
                     </div>
                 </div>
             </div>
@@ -29,10 +31,12 @@ export default {
     },
     data () {
         return {
-            container: null,
             videoImage: require('../assets/images/video-image.png'),
             setPlayerUIDisplay: null,
             markerSVG: require('../assets/marker-24px.svg'),
+            playerControls: [
+                'control1', 'control2', 'control3'
+            ],
             videoInfo: {
                 duration: 547,
                 markers: [
@@ -52,14 +56,8 @@ export default {
                         label: 'Mayor escapes to Alaska, citing campaign commitments'
                     }
                 ]
-            },
-            playerControls: [
-                'control1', 'control2', 'control3'
-            ],
+            }
         }
-    },
-    mounted () {
-        this.container = this.$refs.player
     },
     methods: {
         onMouseEvent (condition) {
@@ -77,6 +75,9 @@ export default {
 <style lang="scss" scoped>
     .video-player {
         #player {
+            min-width: 800px;
+            max-width: 1300px;
+            margin: 0 auto;
             img {
                 width: 100%;
             }
@@ -98,7 +99,7 @@ export default {
             .player-controls {
                 display: flex;
                 position: relative;
-                top: -35px;
+                bottom: 35px;
                 cursor: pointer;
                 .control {
                     height: 20px;

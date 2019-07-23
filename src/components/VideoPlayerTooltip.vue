@@ -13,15 +13,15 @@ export default {
 <style lang="scss" scoped>
     .tooltip {
         position: absolute;
+        bottom: 85px;
+        width: 275px;
         background: #fff;
         color: #000;
         border: 2px solid #00A3FF;
         border-radius: 5px;
-        bottom: 85px;
         font-family: sans-serif;
         font-weight: bold;
         line-height: 20px;
-        width: 275px;
         p {
             margin: 10px;
         }

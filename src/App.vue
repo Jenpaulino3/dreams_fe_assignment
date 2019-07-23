@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomePage from '@/views/HomePage'
+import HomePage from '@/pages/HomePage'
 
 export default {
   name: 'app',
@@ -16,5 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
